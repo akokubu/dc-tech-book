@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+.login-box-wrap {
+    width: 420px;
+    color: #fcfcfc;
+    padding: 40px 30px;
+    margin: 50px auto 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bg-dark {
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    background-origin: round;
+    background-attachment: fixed;
+    background-image: url(/images/login-bg.jpg);
+    background-repeat: no-repeat;
+}
+
+.form-group {
+    text-align: left;
+}
