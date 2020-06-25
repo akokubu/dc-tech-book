@@ -3,7 +3,6 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-    render layout: false
   end
 
   def show
@@ -14,9 +13,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = 'Welcome to the Dcp Tech Book App!'
+      log_in @user
       redirect_to @user
     else
-      render 'new', layout: false
+      render 'new'
     end
   end
 
