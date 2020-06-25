@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <%= link_to "dcp tech book", '#', class: 'navbar-brand' %>
+
+  <div class="collapse navbar-collapse" id="Navber">
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav">
+        <% if logged_in? %>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Account<b class="caret">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "Profile", current_user, class: 'dropdown-item' %>
+            <a class="dropdown-item" href="#">Settings</a>
+            <div class="dropdown-divider"></div>
+            <%= link_to "Log out", logout_path, class: 'dropdown-item', method: :delete %>
+          </div>
+        </li>
+        <% else %>
+        <li class="nav-item"><%= link_to "Log in", login_path, class: 'nav-link' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
